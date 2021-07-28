@@ -13,13 +13,13 @@ Par conséquent ce model est idéale pour notre problématique. En effet, on va 
 #### Entrée et sortie
 **Entrée** : L'entrée est un batch d'images, et chaque image a la taille (m, 608, 608, 3)
 **Sortie** : La sortie est une liste de boîtes englobantes avec les classes reconnues. Chaque boîte englobante est représentée par 6 nombres <img src="https://render.githubusercontent.com/render/math?math=(p_c, b_x, b_y, b_h, b_w, c)"> comme expliqué ci-dessous. Si vous étendez $c$ en un vecteur à 80 dimensions, chaque boîte englobante est alors représentée par 85 nombres.
-- $p_c$ : Probabilité qu'un objet soit présent dans une boîte englobante.
-- $b_x, b_y$ :  Cordonnées du centre de la boite englobante.
-- $b_h, b_w$ :  Hauteur et largeur de la boite englobante.
-- $c$ : classe de l'objet détecté
+- <img src="https://render.githubusercontent.com/render/math?math=p_c"> : Probabilité qu'un objet soit présent dans une boîte englobante.
+- <img src="https://render.githubusercontent.com/render/math?math=b_x, b_y"> :  Cordonnées du centre de la boite englobante.
+- <img src="https://render.githubusercontent.com/render/math?math=b_h, b_w"> :  Hauteur et largeur de la boite englobante.
+- <img src="https://render.githubusercontent.com/render/math?math=c"> : classe de l'objet détecté
 #### Anchor Boxes 
 - Les anchor Boxes sont choisies en explorant les données d'entraînement pour choisir des rapports hauteur/largeur raisonnables qui représentent les différentes classes.
-- La dimension pour les anchor boxes est l'avant-dernière dimension dans l'encodage : $(m, n_H,n_W,ancres,classes)$.
+- La dimension pour les anchor boxes est l'avant-dernière dimension dans l'encodage : <img src="https://render.githubusercontent.com/render/math?math=(m, n_H,n_W,ancres,classes)">.
 - L'architecture YOLO est : IMAGE (m, 640, 640, 3) -> DEEP CNN -> ENCODAGE (m, n_H,n_W, n_anchors, 3).
 
 ### Implémentation
