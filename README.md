@@ -1,5 +1,6 @@
 
 # ML assignment - OCR
+![formula](https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1)
 ## Objectif
 Dans ce projet, on vise à établir un algorithme IA permettant la reconnaissance des objets dans les documents. Il existe plusieurs modèles OCR permettant la détetion du texte avec une bonne précision. Mais actuellement, après quelques évolutions de modèles de documents, certain d'eux comprennent des éléments non textuels qui ont une valeur informative comme le code QR et code bar. Habituellement, ces deux éléments sont détectés par des pipelines différents de ceux qui se concentrent sur les éléments textuels. Mais dans le but de la parallélisation, on va explorer une approche différente ici : détectons tout en même temps.
 
