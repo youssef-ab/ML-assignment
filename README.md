@@ -1,6 +1,6 @@
 
 # ML assignment - OCR
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
+
 ## Objectif
 Dans ce projet, on vise à établir un algorithme IA permettant la reconnaissance des objets dans les documents. Il existe plusieurs modèles OCR permettant la détetion du texte avec une bonne précision. Mais actuellement, après quelques évolutions de modèles de documents, certain d'eux comprennent des éléments non textuels qui ont une valeur informative comme le code QR et code bar. Habituellement, ces deux éléments sont détectés par des pipelines différents de ceux qui se concentrent sur les éléments textuels. Mais dans le but de la parallélisation, on va explorer une approche différente ici : détectons tout en même temps.
 
@@ -12,7 +12,7 @@ Par conséquent ce model est idéale pour notre problématique. En effet, on va 
 ### Détails du modèle
 #### Entrée et sortie
 **Entrée** : L'entrée est un batch d'images, et chaque image a la taille (m, 608, 608, 3)
-**Sortie** : La sortie est une liste de boîtes englobantes avec les classes reconnues. Chaque boîte englobante est représentée par 6 nombres $(p_c, b_x, b_y, b_h, b_w, c)$ comme expliqué ci-dessous. Si vous étendez $c$ en un vecteur à 80 dimensions, chaque boîte englobante est alors représentée par 85 nombres.
+**Sortie** : La sortie est une liste de boîtes englobantes avec les classes reconnues. Chaque boîte englobante est représentée par 6 nombres <img src="https://render.githubusercontent.com/render/math?math=(p_c, b_x, b_y, b_h, b_w, c)"> comme expliqué ci-dessous. Si vous étendez $c$ en un vecteur à 80 dimensions, chaque boîte englobante est alors représentée par 85 nombres.
 - $p_c$ : Probabilité qu'un objet soit présent dans une boîte englobante.
 - $b_x, b_y$ :  Cordonnées du centre de la boite englobante.
 - $b_h, b_w$ :  Hauteur et largeur de la boite englobante.
