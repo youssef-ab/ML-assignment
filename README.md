@@ -49,8 +49,8 @@ Pour entraîner un modèle sur un ensemble de données personnalisé, j'ai appel
 - cache - cache les images du jeu de données pour un entraînement plus rapide
 L'entraînement a pris environ 1h30 minutes. Le meilleur modèle est enregistré dans le fichier weights/best_yolov5x_exo2.pt.
 ####  Evaluation
-Le projet contient une fonction plot_results() permettant d'évaluer les performances de notre modèle : 
-On constate que la précision moyenne (mAP) s'améliore tout au long de la formation. Le modèle pourrait bénéficier d'un entraînement supplémentaire, mais ça va prendre beaucoup plus de temps.
+Le projet contient une fonction plot_results() permettant d'évaluer les performances de notre modèle :
+![Evaluation du modèle](https://github.com/youssef-ab/ML-assignment/blob/main/figures/performance.PNG)On constate que la précision moyenne (mAP) s'améliore tout au long de la formation. Le modèle pourrait bénéficier d'un entraînement supplémentaire, mais ça va prendre beaucoup plus de temps.
 #### Prédiction
 On a choisis 50 images de l'ensemble de validation et on les a déplacé vers inference/images pour voir comment notre modèle se comporte sur celles-ci.
 On a utilisé le script detect.py pour tester notre modèle sur les images. Voici les paramètres que nous utilisons :
@@ -58,6 +58,7 @@ On a utilisé le script detect.py pour tester notre modèle sur les images. Voic
 - img 640 - redimensionne les images à 640x640 px
 - conf 0.4 - prend en compte les prédictions avec une confiance de 0.4 ou plus élevée
 - source ./inference/images/ - chemin vers les images
+![Prédiction sur 22 images](https://github.com/youssef-ab/ML-assignment/blob/main/figures/pr%C3%A9diction.PNG)
 
 ## Exécution
 Pour reproduire les résultats que j'ai obtenu, télécharger l'ensemble des images d'entraînement  dans un dossier "samples" et les  labels  dans le répertoire  principal  "content". Ensuite, vous pouvez  exécuter  le  notebook  sur votre compte  colab  sans aucun souci. Vous pouvez sauter l'étape d'entraînement et passer directement à l'évaluation en téléchargeant le modèle entraîné sur le dossier "content/yolov5/weights/".
